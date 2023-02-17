@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+    <title></title>
+    <style>
+      * {
+        font-family: 'Roboto Condensed', sans-serif;
+      }
+      .dropdown-toggle::after {
+    display: none !important;
+}
+
+table tbody tr {
+    cursor: pointer;
+}
+table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Application</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Sign In</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mb-2 mb-lg-0 me-4">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Joshua Ogwang
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Account Settings</a></li>
+                <li><a class="dropdown-item" href="#">Sign Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div style="height: 100vh;" class="d-flex">
+      <div class="h-100 p-2 border-end" style="width: 200px;">
+        <p class="h3 text-center fw-bold border-bottom">
+          <a class="nav-link" href="index.html">Dashboard</a>
+        </p>
+        <p class="h5 fw-bold text-secondary sidebar-menu-toggle">
+          <i class="bi bi-people-fill"></i> &nbsp;
+          Profiles</p>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="profiles.html">Profiles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="table.html">Tables</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Add New</a>
+            </li>
+          </ul>
+          <p class="h5 fw-bold text-secondary sidebar-menu-toggle">
+            <i class="bi bi-gear-fill"></i> &nbsp;
+            Settings</p>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Users</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Add New</a>
+              </li>
+            </ul>
+          <div>
+              
+          </div> 
+      </div>
+      <div class="w-75 m-5">  
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Dashboard</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Tables</li>
+            </ol>
+          </nav>
+          <div class="border-bottom mb-5">
+            <p class="h2">Tables</p>
+            <p>Template tables with search and pagination.</p>
+          </div>
+        <div>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="dropdown mx-2">
+                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="rowCount" data-bs-toggle="dropdown" aria-expanded="false">
+                        10
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="rowCount" style="min-width: 10px !important;">
+                      <li><a class="dropdown-item" href="#">15</a></li>
+                      <li><a class="dropdown-item" href="#">25</a></li>
+                      <li><a class="dropdown-item" href="#">50</a></li>
+                      <li><a class="dropdown-item" href="#">100</a></li>
+                    </ul>
+                  </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <form>
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      </form>
+                      <div class="dropdown mx-2">
+                        <button class="btn btn-sm dropdown-toggle" type="button" id="filterOptions" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-three-dots-vertical" style="font-size: 25px;"></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="filterOptions" style="min-width: 20px !important;">
+                          <li><a class="dropdown-item" href="#">Filter</a></li>
+                          <li><a class="dropdown-item" href="#">Sort</a></li>
+                        </ul>
+                      </div>
+                </div>
+            </div>
+            <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span>#</span>
+                            <button type="button" class="btn btn-sm"><i class="bi bi-sort-up"></i></button>
+                        </div>
+
+                    </th>
+                    <th scope="col"><div class="d-flex justify-content-between align-items-center">
+                        <span>First</span>
+                        <button type="button" class="btn btn-sm"><i class="bi bi-sort-up"></i></button>
+                    </div></th>
+                    <th scope="col"><div class="d-flex justify-content-between align-items-center">
+                        <span>Last</span>
+                        <button type="button" class="btn btn-sm"><i class="bi bi-sort-up"></i></button>
+                    </div></th>
+                    <th scope="col"><div class="d-flex justify-content-between align-items-center">
+                        <span>Handle</span>
+                        <button type="button" class="btn btn-sm"><i class="bi bi-sort-up"></i></button>
+                    </div></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry the Bird</td>
+                    <td>Larry the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>1 of 10</div>
+                <div>
+                    <button class="btn btn-sm btn-primary"><i class="bi bi-chevron-double-left"></i> Prev</button>
+                    <button class="btn btn-sm btn-primary">Next <i class="bi bi-chevron-double-right"></i></button>
+                </div>
+              </div>
+        </div>
+        
+      </div>
+    </div>
+    <footer class="bg-secondary">
+      <div class="d-flex justify-content-between p-2">
+        <div class="p-2 text-white fw-bold">&copy; 2022 - Manuree Templates</div>
+        <div class="d-flex justify-content-between align-items-center">
+          <i class="bi bi-github" style="width: 24px; height: 24px"></i>
+          <i class="bi bi-twitter" style="width: 24px; height: 24px"></i>
+          <i class="bi bi-linkedin" style="width: 24px; height: 24px"></i>
+        </div>
+      </div>
+    </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <script>
+      
+    </script>
+  </body>
+</html>
